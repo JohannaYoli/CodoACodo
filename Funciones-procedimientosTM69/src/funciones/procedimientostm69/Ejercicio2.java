@@ -18,28 +18,26 @@ public class Ejercicio2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String nombre = funcionNombre();
-        String ocupacion = funcionOcupacion();
-        int edad = funcionEdad();
+        Scanner entrada = new Scanner (System.in);
+        String nombre = funcionNombre(entrada);
+        String ocupacion = funcionOcupacion(entrada);
+        int edad = funcionEdad(entrada);
         procedimientoInfo(nombre, ocupacion, edad);
     }
     
-    public static String funcionNombre () {
-       Scanner entrada = new Scanner(System.in);
+    public static String funcionNombre (Scanner entrada) {
        System.out.println("Ingrese nombre: ");
        String nombre = entrada.nextLine();
        return nombre;
     }
     
-    public static String funcionOcupacion () {
-       Scanner entrada = new Scanner(System.in);
+    public static String funcionOcupacion (Scanner entrada) {
        System.out.println("Ingrese ocupación: ");
        String ocupacion = entrada.nextLine();
        return ocupacion;
     }
     
-     public static int funcionEdad () {
-       Scanner entrada = new Scanner(System.in);
+     public static int funcionEdad (Scanner entrada) {
        System.out.println("Ingrese edad: ");
        int edad = entrada.nextInt();
        return edad;
